@@ -12,11 +12,11 @@ export default function Home() {
   ]);
 
   return (
-    <div>
+    <div className='bg-black overflow-x-hidden'>
       <Head>
         <title>Firlej Kamery</title>
       </Head>
-      <div className='w-screen h-screen grid grid-cols-1 xl:grid-cols-2 bg-black'>
+      <div className='w-screen h-screen flex flex-wrap items-center align-middle justify-center'>
         { 
           cams.map((cam) => 
             <Camera key={cam.id} id={cam.id}/>

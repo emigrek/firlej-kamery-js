@@ -10,7 +10,7 @@ function Camera({ id }) {
   };
 
   return (
-    <div className='relative w-max mx-auto aspect-video select-none pointer-events-none'>
+    <div className='relative w-full xl:w-[44%] aspect-video select-none pointer-events-none'>
       {
         loading && (
           <div className='absolute inset-0 z-40 bg-black/80 h-full aspect-video'>
