@@ -14,7 +14,9 @@ export default function Home() {
   return (
     <div className='bg-black overflow-x-hidden m-0 p-0'>
       <Head>
-        <title>Firlej Kamery</title>
+        <title>Firlej kamery</title>
+        <meta property="og:title" content="Firlej kamery" key="title" />
+        <meta property="og:description" content="Kamery nad jeziorem Firlej" key="description" />
       </Head>
       <div className='w-screen h-screen flex flex-wrap items-center align-middle justify-center'>
         { 
