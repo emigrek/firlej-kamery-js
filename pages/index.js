@@ -16,7 +16,6 @@ export default function Home() {
       <Head>
         <title>Firlej kamery</title>
         <meta property="og:title" content="Firlej kamery" key="title" />
-        <meta property="og:image" content="%PUBLIC_URL%/logo_firlej.png" key="image" />
         <meta property="og:description" content="Kamery nad jeziorem Firlej" key="description" />
       </Head>
       <div className='w-screen h-screen flex flex-wrap items-center align-middle justify-center'>
