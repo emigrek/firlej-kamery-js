@@ -14,8 +14,10 @@ function Camera({ id }) {
       {
         loading && (
           <div className='absolute inset-0 z-40 bg-black/80 h-full aspect-video'>
-            <div className='flex items-center align-middle justify-center text-center h-full aspect-video'>
-              <div className='text-8xl animate-pulse opacity-50'>📡</div>
+            <div className='flex items-center align-middle justify-center text-center aspect-video'>
+              <div className='relative w-28 h-28 opacity-50 animate-pulse'>
+                <Image alt="logo" priority src={`/logo_firlej.png`} layout='fill'/>  
+              </div>
             </div>
           </div>
         )
