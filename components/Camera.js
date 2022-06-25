@@ -10,12 +10,12 @@ function Camera({ id }) {
   };
 
   return (
-    <div className='relative w-full xl:w-[44%] aspect-video select-none pointer-events-none'>
+    <div className='relative w-full xl:w-[44%] h-max aspect-video select-none pointer-events-none'>
       {
         loading && (
           <div className='absolute inset-0 z-40 bg-black/80 h-full aspect-video'>
             <div className='flex items-center align-middle justify-center text-center h-full aspect-video'>
-              <div className='text-8xl animate-pulse'>📷</div>
+              <div className='text-8xl animate-pulse opacity-50'>📡</div>
             </div>
           </div>
         )
