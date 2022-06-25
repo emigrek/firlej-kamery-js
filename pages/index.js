@@ -12,7 +12,7 @@ export default function Home() {
   ]);
 
   return (
-    <div className='bg-black overflow-x-hidden'>
+    <div className='bg-black overflow-x-hidden m-0 p-0'>
       <Head>
         <title>Firlej Kamery</title>
       </Head>
