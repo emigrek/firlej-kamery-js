@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     domains: ['jezioro.firlej.pl'],
   },
+  env: {
+    GOOGLE_ANALYTICS: process.env.GOOGLE_ANALYTICS
+  }
 }
 
 module.exports = nextConfig
