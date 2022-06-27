@@ -13,7 +13,7 @@ function Camera({ id }) {
   return (
     <div className='relative xl:h-1/2 h-auto xl:w-auto w-full aspect-video select-none pointer-events-none'>
       { loading && <CameraLoader/> }
-      <Image onLoad={handleLoadingEnd} alt={`camera-${id}`} src={`http://jezioro.firlej.pl/images/Kamery/Kamera${id}.jpg?r=${random}#joomlaImage://local-images/Kamery/Kamera${id}.jpg`} layout='fill'/>  
+      <Image onLoad={handleLoadingEnd} alt={`camera-${id}`} width={'1280px'} height={'720px'} src={`http://jezioro.firlej.pl/images/Kamery/Kamera${id}.jpg?r=${random}#joomlaImage://local-images/Kamery/Kamera${id}.jpg`} layout="responsive"/>  
     </div>
   )
 }
