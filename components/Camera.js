@@ -18,7 +18,7 @@ function Camera({ id }) {
         alt={`camera-${id}`} 
         width={'1280px'} 
         height={'720px'} 
-        src={`https://jezioro.firlej.pl/images/Kamery/Kamera${id}.jpg?r=${random}`}
+        src={`http://jezioro.firlej.pl/images/Kamery/Kamera${id}.jpg?r=${random}#joomlaImage://local-images/Kamery/Kamera${id}.jpg`}
         layout="responsive"
       />  
     </div>
