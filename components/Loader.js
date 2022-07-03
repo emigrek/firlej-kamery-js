@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-function CameraLoader() {
+function Loader() {
   return (
     <div className='absolute inset-0 z-40 bg-white/5 h-full aspect-video animate-pulse'>
         <div className='flex items-center align-middle justify-center text-center aspect-video'>
@@ -13,4 +13,4 @@ function CameraLoader() {
   )
 }
 
-export default CameraLoader
+export default Loader
