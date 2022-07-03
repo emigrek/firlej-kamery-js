@@ -2,7 +2,7 @@ import React from 'react'
 
 function Error() {
   return (
-    <div className='group absolute inset-0 z-40 bg-white/10 h-full aspect-video backdrop-blur-md'>
+    <div className='group absolute inset-0 z-40 bg-white/10 h-full aspect-video'>
         <div className='flex flex-col space-y-1 items-center align-middle justify-center text-center aspect-video'>
             <div className='text-6xl my-5'>
               ❌

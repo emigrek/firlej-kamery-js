@@ -18,11 +18,9 @@ function Camera({ id }) {
   };
 
   const handleRefresh = () => { 
+    setError(false);
     setLoading(true);
-    setTimeout(() => { 
-      setError(false);
-      setRandom(Math.random());
-    }, 1000);
+    setRandom(Math.random());
   }
 
   return (
