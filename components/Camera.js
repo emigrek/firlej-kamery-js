@@ -20,24 +20,25 @@ function Camera({ id }) {
   const handleRefresh = () => { 
     setError(false);
     setLoading(true);
-    setRandom(Math.random());
+    setTimeout(() => {
+      setRandom(Math.random());
+      setLoading(false);
+    }, 1000);
   }
 
   return (
     <div onClick={handleRefresh} className='relative xl:h-1/2 h-auto xl:w-auto w-full aspect-video select-none cursor-pointer'>
       { (loading && !error) && <Loader/> }
       { error && <Error/> }
-      { !error && (
-        <Image 
-          onLoad={handleLoadingEnd} 
-          onError={handleError}
-          alt={`camera-${id}`} 
-          width={'1280px'} 
-          height={'720px'} 
-          src={`http://jezioro.firlej.pl/images/Kamery/Kamera${id}.jpg?r=${random}#joomlaImage://local-images/Kamery/Kamera${id}.jpg`}
-          layout="responsive"
-        />  
-      )}
+      <Image 
+        onLoad={handleLoadingEnd} 
+        onError={handleError}
+        alt={`camera-${id}`} 
+        width={'1280px'} 
+        height={'720px'} 
+        src={`http://jezioro.firlej.pl/images/Kamery/Kamera${id}.jpg?r=${random}#joomlaImage://local-images/Kamery/Kamera${id}.jpg`}
+        layout="responsive"
+      /> 
     </div>
   )
 }
