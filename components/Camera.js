@@ -30,8 +30,9 @@ function Camera({ id }) {
       <Image 
         onLoad={handleLoadingEnd} 
         onError={handleError}
-        alt={`camera-${id}`} 
+        alt={`camera-${id}`}
         width={'1280px'} 
+        quality={100}
         height={'720px'} 
         src={`http://jezioro.firlej.pl/images/Kamery/Kamera${id}.jpg?r=${random}#joomlaImage://local-images/Kamery/Kamera${id}.jpg`}
         layout="responsive"
