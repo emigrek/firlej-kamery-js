@@ -13,11 +13,7 @@ export default function Home() {
   return (
     <div className='bg-black overflow-x-hidden m-0 p-0'>
       <div className='w-screen h-screen flex flex-wrap items-center align-middle justify-center'>
-        { 
-          cams.map((cam) => 
-            <Camera key={cam.id} id={cam.id}/>
-          )
-        }
+        { cams.map((cam) => <Camera key={cam.id} id={cam.id}/> ) }
       </div>
     </div>
   )
