@@ -10,7 +10,7 @@ function Camera({ id }) {
   const [error, setError] = useState(false);
   
   const handleLoadingEnd = () => {
-    setLoading(false);
+    setTimeout(() => { setLoading(false) }, 250);
   };
 
   const handleError = () => {
@@ -20,10 +20,7 @@ function Camera({ id }) {
   const handleRefresh = () => { 
     setError(false);
     setLoading(true);
-    setTimeout(() => {
-      setRandom(Math.random());
-      setLoading(false);
-    }, 1000);
+    setRandom(Math.random());
   }
 
   return (
