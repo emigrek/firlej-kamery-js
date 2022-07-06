@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Firlej kamery</title>
         <meta property="og:title" content="Firlej kamery" key="title" />
-        <meta property='og:image' content="http://www.firlej.pl/wp-content/uploads/2021/09/logo_firlej-2.png" />
+        <meta property="og:image" content="http://www.firlej.pl/wp-content/uploads/2021/09/logo_firlej-2.png" />
         <meta property="og:description" content="Kamery nad jeziorem Firlej" key="description" />
       </Head>
       <Component {...pageProps} />
