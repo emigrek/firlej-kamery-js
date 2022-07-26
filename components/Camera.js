@@ -7,11 +7,10 @@ import Error from './Error';
 function Camera({ id }) {
   const [random, setRandom] = useState(Math.random());
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-  var refreshTimer = null;
+  const [error, setError] = useState(true);
   
   const handleLoadingEnd = () => {
-    setTimeout(() => { setLoading(false) }, 500);
+    setLoading(false);
   };
 
   const handleError = () => {
@@ -19,17 +18,14 @@ function Camera({ id }) {
   };
 
   const handleRefresh = () => { 
-    if(refreshTimer)
-      clearInterval(refreshTimer);
-    
-    setError(false);
     setLoading(true);
+    setError(false);
     setRandom(Math.random());
   }
 
   useEffect(() => {
-    refreshTimer = setInterval(handleRefresh, 1000*60*5);
-    return () => clearInterval(refreshTimer);
+    const refresh = setInterval(handleRefresh, 1000*60*5);
+    return () => clearInterval(refresh);
   }, [random]);
 
   return (
