@@ -7,7 +7,7 @@ import Error from './Error';
 function Camera({ id }) {
   const [random, setRandom] = useState(Math.random());
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(true);
+  const [error, setError] = useState(false);
   
   const handleLoadingEnd = () => {
     setLoading(false);
