@@ -9,8 +9,11 @@ function Camera({ id }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
+  const refreshTime = 1000*60*5;
+  const loadingTime = 500;
+
   useEffect(() => {
-    const refresh = setInterval(handleRefresh, 1000*60*5);
+    const refresh = setInterval(handleRefresh, refreshTime);
     return () => clearInterval(refresh);
   }, [random]);
 
@@ -23,7 +26,7 @@ function Camera({ id }) {
   const handleLoadingEnd = () => {
     setTimeout(() => {
       setLoading(false);
-    }, 800);
+    }, loadingTime);
   };
 
   const handleError = () => {
