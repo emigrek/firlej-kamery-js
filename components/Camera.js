@@ -8,14 +8,11 @@ function Camera({ id }) {
   const [random, setRandom] = useState(Math.random());
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  
-  const handleLoadingEnd = () => {
-    setLoading(false);
-  };
 
-  const handleError = () => {
-    setError(true)
-  };
+  useEffect(() => {
+    const refresh = setInterval(handleRefresh, 1000*60*5);
+    return () => clearInterval(refresh);
+  }, [random]);
 
   const handleRefresh = () => { 
     setLoading(true);
@@ -23,10 +20,15 @@ function Camera({ id }) {
     setRandom(Math.random());
   }
 
-  useEffect(() => {
-    const refresh = setInterval(handleRefresh, 1000*60*5);
-    return () => clearInterval(refresh);
-  }, [random]);
+  const handleLoadingEnd = () => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 800);
+  };
+
+  const handleError = () => {
+    setError(true)
+  };
 
   return (
     <div onClick={handleRefresh} className='relative xl:h-1/2 h-auto xl:w-auto w-full aspect-video select-none cursor-pointer bg-white/5'>
@@ -38,7 +40,7 @@ function Camera({ id }) {
         alt={`camera-${id}`}
         width={'1280px'} 
         quality={100}
-        height={'720px'} 
+        height={'720px'}
         src={`http://jezioro.firlej.pl/images/Kamery/Kamera${id}.jpg?r=${random}#joomlaImage://local-images/Kamery/Kamera${id}.jpg`}
         layout="responsive"
       /> 
