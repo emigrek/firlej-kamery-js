@@ -34,7 +34,7 @@ function Camera({ id }) {
   };
 
   return (
-    <div onClick={handleRefresh} className='relative xl:h-1/2 h-auto xl:w-auto w-full aspect-video select-none cursor-pointer bg-white/5'>
+    <div onClick={handleRefresh} className='relative xl:h-1/2 h-auto xl:w-auto w-full aspect-video select-none cursor-pointer bg-white/5' style={{ WebkitTapHighlightColor: 'transparent', WebkitTouchCallout: 'none'}}>
       { (loading && !error) && <Loader/> }
       { error && <Error/> }
       <Image 
