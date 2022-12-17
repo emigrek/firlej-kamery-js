@@ -1,18 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📷 Firlej Kamery
+Tool to see my home city CCTV's in one place.
 
-## Getting Started
+## 📦 Used packages
+| 📦 Package  | 📋 Reasons |
+| ------------- | ------------- |
+| Next | react framework  |
+| Tailwind CSS  | css framework  |
+| Hero Icons | Icons |
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
+## 🚀 Running
+```
+git clone https://github.com/emigrek/firlej-kamery
+cd firlej-kamery
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-
-## Google Analytics
-
-Use .env.local file to set Google Analaytics ID.
+Run development server
+```
+npm run dev
+```
+or
+run production build
+```
+npm run build
+```
