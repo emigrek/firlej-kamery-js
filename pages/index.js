@@ -6,8 +6,8 @@ export default function Home() {
   const [cams] = useState([4, 10, 11, 12]);
 
   return (
-    <div className='bg-black overflow-x-hidden m-0 p-0'>
-      <div className='w-screen h-screen flex flex-wrap items-center align-middle justify-center'>
+    <div className='p-0 m-0 overflow-x-hidden bg-black'>
+      <div className='flex flex-wrap items-center justify-center w-screen h-screen align-middle'>
         { cams.map((cam) => <Camera key={cam} id={cam}/> ) }
       </div>
     </div>
